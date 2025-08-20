@@ -43,6 +43,7 @@
 
   // Τouch handlers
   const onTouchStart = (e) => {
+    if (e.touches.length > 1) { state.dragging = false; return; }
     if (e.touches.length !== 1) return;
     state.dragging = true;
     state.startX = e.touches[0].clientX;
@@ -51,6 +52,7 @@
   };
 
   const onTouchMove = (e) => {
+    if (e.touches.length > 1) return;
     if (!state.dragging) return;
     state.currentX = e.touches[0].clientX;
     const delta = state.currentX - state.startX;

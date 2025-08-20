@@ -1,12 +1,12 @@
 :root {
-  --bg: #ffffff;
-  --fg: #111111;
-  --hint-bg: rgba(0,0,0,0.5);
-  --hint-fg: #ffffff;
-  --accent: #111111;
-  --transition: 300ms cubic-bezier(.22,.61,.36,1);
+--bg: #ffffff;
+--fg: #111111;
+--hint-bg: rgba(0,0,0,0.5);
+--hint-fg: #ffffff;
+--accent: #111111;
+--transition: 300ms cubic-bezier(.22,.61,.36,1);
+--bg-gradient: linear-gradient(135deg, #efefef 0%, #ffb46a 100%); /* grey→orange */
 }
-
 * { box-sizing: border-box; }
 
 html, body {
@@ -20,12 +20,12 @@ html, body {
 
 /* Mobile-first: fullscreen slider */
 .slider {
-  position: relative;
-  width: 100vw;
-  height: 100dvh; /* ασφαλές για mobile UI chrome */
-  overflow: hidden;
-  touch-action: pan-y; /* επιτρέπουμε vertical scroll gestures, αλλά εμείς ακούμε οριζόντιο */
-  background: var(--bg);
+position: relative;
+width: 100vw;
+height: 100dvh;
+overflow: hidden;
+touch-action: pan-y;
+background: var(--bg-gradient); /* από απλό λευκό σε gradient */
 }
 
 /* Horizontal track */
@@ -111,5 +111,6 @@ html, body {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    touch-action: pinch-zoom;
   }
 }
