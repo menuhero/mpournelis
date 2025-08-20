@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Cafe Mpournelis Chora</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Hint arrow (εξαφανίζεται μετά την 1η αλληλεπίδραση ή στο 2ο slide) -->
+  <div id="hint" aria-hidden="true">
+    <span class="arrow">‹</span>
+    <span class="text">Σύρε δεξιά</span>
+  </div>
+
+  <!-- Wrapper για slider -->
+  <div id="slider" class="slider" aria-roledescription="carousel" aria-label="Menu slides">
+    <div class="slides" id="slides">
+      <!-- Slide 1 -->
+      <section class="slide" aria-label="Σελίδα 1">
+        <img src="images/menu1.png" alt="Μενού σελίδα 1" />
+      </section>
+      <!-- Slide 2 -->
+      <section class="slide" aria-label="Σελίδα 2">
+        <img src="images/menu2.png" alt="Μενού σελίδα 2" />
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
